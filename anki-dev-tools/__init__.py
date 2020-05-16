@@ -51,10 +51,14 @@ class DebugHtml:
 
 mw.debugHtml = DebugHtml()
 
+debugMenu = mw.menuBar().addMenu("Debug")
+
 action = QAction("Show Deck JSON", mw)
 action.triggered.connect(showDeckJson)
-mw.form.menuTools.addAction(action)
+#mw.form.menuTools.addAction(action)
+debugMenu.addAction(action)
 
 action2 = QAction("Show WebView HTML", mw)
 action2.triggered.connect(mw.debugHtml.requestHtml)
-mw.form.menuTools.addAction(action2)
+#mw.form.menuTools.addAction(action2)
+debugMenu.addAction(action2)
