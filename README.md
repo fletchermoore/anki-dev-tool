@@ -1,6 +1,11 @@
 # anki-dev-tools
-Utilities to Anki facilitate addon development.
+Utilities to Anki facilitate addon development and debugging.
 
-Anki colleciton is somewhat annoying to navigate. Not sure what all I am going to need for my projects ultimately.
 
-Currently, this addon merely adds a button to Tools to show a textbox containing the Deck JSON for the current collection. This is the saved DB data, not the live deck state.
+## Functions
+
+### Show Deck JSON: 
+Displays JSON representing deck state in the collection. That is, the result of "SELECT decks FROM col;"
+
+### Show WebView HTML: 
+The main window of Anki consists of a Qt Menu, and three QtWebViews stacked: a thin navigation menu (mw.toolbarWeb), the primary viewing area (mw.web), and the bottom buttons (mw.bottomWeb). This displays all three HTML pages of the current view.
